@@ -62,5 +62,5 @@ The application boasts a logical component and folder structure, making it easy 
 
 ### Conclusion
 
-I have no idea where im going to select or not, but literally stuct at openWeatherAPI , when i make a request it always saing unotherised
-But if i have do a more time, I would just do like this project https://github.com/srinivasAarth/panorbit_test
+I have no idea where im going to select or not, but literally stucked at openWeatherAPI APIKEY activation , when i make a request it always saing unotherised
+But if i do have a more time, I would just do like this project https://github.com/srinivasAarth/panorbit_test
