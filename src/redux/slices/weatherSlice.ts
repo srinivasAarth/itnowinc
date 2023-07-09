@@ -41,14 +41,12 @@ export const getPosition = () => {
 export const getMainData =
   ({ latitude, longitude }) =>
   async (dispatch: any) => {
-    console.log(latitude, longitude);
     try {
       if (navigator.geolocation) {
         dispatch(setStatus(true));
         // openWeatherAPI saying it will be activated after 3 hours to 4 hours i dont know way this is happening to me, im getting 401 error since 3 hours i created so many keys in openWeatherAPI
         // so im using different api for serving the data and matching the deadline
         const res = await getWeather(latitude, longitude);
-        console.log(res.data);
         dispatch(setWeatherData(res.data || []));
         dispatch(setStatus(false));
       } else {

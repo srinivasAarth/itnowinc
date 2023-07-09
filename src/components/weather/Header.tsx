@@ -12,21 +12,21 @@ const Header = styled(Box)`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 `;
 const SearchInputs = () => {
   const { cityValue, lon, lat } = useSelector((state: any) => state.weather);
   const dispatch = useDispatch();
-  console.log(lon, lat);
   return (
     <Header>
       <TextField
-        type="number"
+        type="Te"
         value={lat}
         onChange={(e) => dispatch(setLatitude(e.target.value))}
         sx={{ width: "40%" }}
         placeholder="Type latitude"
+        helperText="Enter latitude"
       />
       <TextField
         type="number"
@@ -34,11 +34,12 @@ const SearchInputs = () => {
         onChange={(e) => dispatch(setLongitude(e.target.value))}
         sx={{ width: "40%" }}
         placeholder="Type longitude"
+        helperText="Enter longitude"
       />
       <Button
         onClick={() => dispatch(getMainData({ latitude: lat, longitude: lon }))}
         variant="contained"
-        sx={{ mt: 0, py: 1.5 }}
+        sx={{ mt: 0.5, py: 1.5 }}
       >
         Get Report
       </Button>

@@ -43,7 +43,6 @@ const SearchInput = styled("input")`
 
 const Table = () => {
   const { records } = useSelector((state: any) => state.register);
-  console.log(records);
   const [keyword, setKeyword] = React.useState("");
   const filteredRecords = records.filter((rcds) => {
     if (!keyword) {
