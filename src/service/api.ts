@@ -1,0 +1,6 @@
+import axios from "axios";
+export const api = axios.create({
+  //   baseURL: "https://api.openweathermap.org/",
+  baseURL: "https://api.open-meteo.com/v1/",
+  headers: { "Content-Type": "application/json" },
+});
